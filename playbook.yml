@@ -8,3 +8,12 @@
           - httpd
           - firewalld
         state: present
+
+    - name: "Start and enable the service"
+      service:
+        name: "{{ item }}"
+        state: restarted
+      loop:
+        - httpd.service
+        - firewalld.service
+
