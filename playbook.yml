@@ -1,0 +1,10 @@
+---
+- name: "Webserver setup"
+  hosts: all
+  tasks:
+    - name: "Install webserver"
+      yum:
+        name: 
+          - httpd
+          - firewalld
+        state: present
